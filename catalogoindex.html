@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASV Tech – Soluciones Inteligentes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #0ff;
+        }
+        nav a {
+            color: #0ff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .search-box {
+            margin: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border-radius: 5px;
+            border: none;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            width: 300px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,255,255,0.2);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product h3, .product p {
+            margin: 10px;
+        }
+        .product a {
+            display: block;
+            background-color: #0ff;
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EASV Tech – Soluciones Inteligentes</h1>
+        <nav>
+            <a href="https://wa.me/59899578692" target="_blank">WhatsApp</a>
+            <a href="https://www.instagram.com/easvuy" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/easv.uy" target="_blank">Facebook</a>
+            <a href="https://www.threads.com/@easvuy" target="_blank">Threads</a>
+            <a href="https://g.co/kgs/TB9mUT8" target="_blank">Google Reviews</a>
+            <a href="https://www.tiktok.com/@easv.uy" target="_blank">TikTok</a>
+        </nav>
+    </header>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Buscar productos..." onkeyup="searchProducts()">
+    </div>
+
+    <div class="product-grid" id="productGrid">
+        <div class="product">
+            <img src="proyector_vivibright_l1.png" alt="Proyector ViviBright">
+            <h3>Mini Proyector ViviBright L1</h3>
+            <p>Proyector LED 1000 lúmenes, hasta 120”, altavoz integrado.</p>
+            <a href="https://wa.me/59899578692?text=Hola%2C%20quiero%20info%20sobre%20el%20Proyector%20ViviBright">Consultar</a>
+        </div>
+        <div class="product">
+            <img src="tablet_samsung_tab_a9.png" alt="Tablet Samsung A9">
+            <h3>Tablet Samsung Galaxy Tab A9</h3>
+            <p>8.7” TFT LCD, 4GB RAM, 64GB almacenamiento, cámara 8MP.</p>
+            <a href="https://wa.me/59899578692?text=Hola%2C%20quiero%20info%20sobre%20la%20Samsung%20Tab%20A9">Consultar</a>
+        </div>
+        <div class="product">
+            <img src="tablet_redmi_pad_se.png" alt="Redmi Pad SE">
+            <h3>Xiaomi Redmi Pad SE</h3>
+            <p>11” 90Hz, Snapdragon 680, 256GB, batería 8000 mAh.</p>
+            <a href="https://wa.me/59899578692?text=Hola%2C%20quiero%20info%20sobre%20la%20Redmi%20Pad%20SE">Consultar</a>
+        </div>
+        <div class="product">
+            <img src="tablet_pixel_c_gamer.png" alt="Tablet Pixel C">
+            <h3>Tablet Gamer Pixel C</h3>
+            <p>Tegra X1, pantalla 10.2”, ideal para gaming y estudio.</p>
+            <a href="https://wa.me/59899578692?text=Hola%2C%20quiero%20info%20sobre%20la%20Pixel%20C">Consultar</a>
+        </div>
+        <div class="product">
+            <img src="pc_ryzen5_4600g_rgb.png" alt="PC Ryzen 5 4600G">
+            <h3>PC Gamer Ryzen 5 4600G</h3>
+            <p>32GB RAM, 1TB SSD, RGB, Office 2024, 5 estrellas en Google.</p>
+            <a href="https://wa.me/59899578692?text=Hola%2C%20quiero%20info%20sobre%20la%20PC%20Ryzen%205%204600G">Consultar</a>
+        </div>
+    </div>
+
+    <footer>
+        EASV Technology © 2025 – Catálogo digital creado con amor y tecnología.
+    </footer>
+
+    <script>
+        function searchProducts() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                const text = product.innerText.toLowerCase();
+                product.style.display = text.includes(input) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
